@@ -1,0 +1,27 @@
+version: '3'
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  php7:
+    build:
+      context: ./php7
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    volumes:
+      - ./app:/app
+
+  php8:
+    build:
+      context: ./php8
+    ports:
+      - "8001:8001"
+    depends_on:
+      - redis
+    volumes:
+      - ./app:/app

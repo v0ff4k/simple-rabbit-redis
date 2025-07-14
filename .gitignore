@@ -1,0 +1,29 @@
+.env
+
+# ide folders
+.idea
+nbproject/*
+
+# rand archives.
+.svn
+*.zip
+*.7z
+*.dmg
+*.gz
+*.rar
+*.tar
+*.phar
+
+# log and dump files
+*.log
+*.sql
+
+# temp trashy
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+Thumbs.db
+
+# temp files.
+tmp/*
